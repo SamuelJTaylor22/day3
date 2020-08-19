@@ -1,10 +1,18 @@
 let strong = {
 
-  Fire: ["Grass"],
+  Fire: ["Grass","Ice"],
   Water: ["Fire", "Rock"],
   Grass: ["Water", "Rock"],
-  Rock: ["Fire"]
-
+  Electric: ["Water", "Flying"],
+  Psychic: ["Fighting"],
+  Ice: ["Grass", "Dragon", "Flying"],
+  Dragon: [],
+  Dark: ["Psychic"],
+  Fairy: ["Dark", "Dragon", "Fighting"],
+  Fighting: ["Dark", "Rock"],
+  Flying: ["Grass"],
+  Poison: ["Grass"],
+  
 }
 let types = Object.keys(strong)
 
