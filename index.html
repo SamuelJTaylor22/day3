@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet"href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="container-fluid">
+    <div class="row bg-danger text-light">
+      <div class="col-12">
+        <h1>Fire-Water-Grass</h1>
+      </div>
+    </div>
+  </header>
+  <main class="container-fluid">
+    <section class="row text-center" id="resultsArea">
+      <div class="col-12">
+        <img src="//placehold.it/200x200" alt="">
+      </div>
+      <div class="col-12">
+        <h3>Try your luck!</h3>
+      </div>
+    </section>
+    <section class="row text-center">
+      <div class="col">
+        <button type="button" class="btn btn-danger" onclick="play('Fire')">Fire</button>
+        <button type="button" class="btn btn-primary" onclick="play('Water')"> Water </button>
+        <button type="button" class="btn btn-success" onclick="play('Grass')"> Grass </button>
+      </div>
+    </section>
+  </main>
+  <footer class="container-fluid">
+    <section class="row">
+      <div class="col"></div>
+    </section>
+  </footer>
+  
+  <script src="app.js"></script>
+</body>
+</html>
