@@ -1,11 +1,12 @@
 let strong = {
 
-  Fire: "Grass",
-  Water: "Fire",
-  Grass: "Water"
+  Fire: ["Grass"],
+  Water: ["Fire", "Rock"],
+  Grass: ["Water", "Rock"],
+  Rock: ["Fire"]
 
 }
-
+let types = Object.keys(strong)
 
 
 
@@ -42,19 +43,13 @@ let strong = {
 // }
 
 function play(typeSelected){
-  let random = Math.floor(Math.random() *(2.999))
-  let typeFighting = ""
-  let dictionaryPlace
+  let random = Math.floor(Math.random() *(types.length- .01))
+  let typeFighting = types[random]
   let result = ""
-  switch(random){
-    case 0: typeFighting = "Fire"; dictionaryPlace = strong.Fire; break;
-    case 1: typeFighting = "Water"; dictionaryPlace = strong.Water; break;
-    case 2: typeFighting = "Grass"; dictionaryPlace = strong.Grass; break;
-  }
   if(typeSelected == typeFighting){
     result = "tie"
   }
-  else if(dictionaryPlace == typeSelected){
+  else if(strong[typeSelected].includes(typeFighting)){
     result = "win"
   }
   else{
